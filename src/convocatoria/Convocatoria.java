@@ -13,8 +13,6 @@ import java.util.Scanner;
  * @author 57305
  */
 public class Convocatoria {
-    
-   
 
     /**
      * @param args the command line arguments
@@ -70,6 +68,7 @@ public class Convocatoria {
                     
                     System.out.println("Digite el club del futbolista: ");
                     futbolistas[contador].setEquipo(entrada.next());
+                    contador++;
                     
                     break;
                 case 2:
@@ -77,6 +76,15 @@ public class Convocatoria {
                 case 3:
                     break;
                 case 4:
+                    
+                    for (int i=0; i<contador; i++) {
+                        System.out.println(futbolistas[i].getNumeroCamiseta());
+                        System.out.println(futbolistas[i].getNombre());
+                        System.out.println(futbolistas[i].getApellido());
+                        System.out.println(futbolistas[i].getPosicion());
+                        System.out.println(futbolistas[i].getEdad());
+                        System.out.println(futbolistas[i].getEquipo());
+                    }
                     break;
                 case 5:
                     System.out.println("");

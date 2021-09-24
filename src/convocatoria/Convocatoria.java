@@ -20,7 +20,7 @@ public class Convocatoria {
     public static void main(String[] args) {
        
         Scanner entrada  = new Scanner (System.in);
-        int opcion;
+        int opcion, dorsal;
         int contador=0;
         
         Futbolista[] futbolistas= new Futbolista[5];
@@ -72,6 +72,9 @@ public class Convocatoria {
                     
                     break;
                 case 2:
+                    System.out.println("ingrese Dorsal: ");
+                    dorsal=entrada.nextInt();
+                    
                     break;
                 case 3:
                     break;

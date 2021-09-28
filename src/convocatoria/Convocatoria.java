@@ -69,15 +69,64 @@ public class Convocatoria {
                     System.out.println("Digite el club del futbolista: ");
                     futbolistas[contador].setEquipo(entrada.next());
                     contador++;
-                    
                     break;
+                    
+                    
                 case 2:
+                    System.out.println("ingrese Dorsal: ");
+                    System.out.println("                ");
+                    dorsal=entrada.nextInt();
+                    
+                    for (int i=0; i<contador; i++){
+                    
+                        if(dorsal==futbolistas[i].getNumeroCamiseta()){
+                            System.out.println("Encontrado "+dorsal);
+                            System.out.println(futbolistas[i].getNombre());
+                            System.out.println(futbolistas[i].getApellido());
+                            System.out.println(futbolistas[i].getPosicion());
+                            System.out.println(futbolistas[i].getEdad());
+                            System.out.println(futbolistas[i].getEquipo());
+                            System.out.println("");
+                            
+                        }else{
+                            System.out.println("Dorsal no encontrada");
+                            
+                        }
+                    
+                    }
+                    break;
+                    
+                    
+                case 3:
                     System.out.println("ingrese Dorsal: ");
                     dorsal=entrada.nextInt();
                     
+                    for (int i=0; i<contador; i++){
+                        if(dorsal==futbolistas[i].getNumeroCamiseta()){
+                            
+                            System.out.println("Digite nuevo numero");
+                            futbolistas[i].setNumeroCamiseta(entrada.nextInt());
+                            System.out.println("Digite nuevo nombre");
+                            futbolistas[i].setNombre(entrada.next());
+                            System.out.println("Digite nuevo apellido");
+                            futbolistas[i].setApellido(entrada.next());
+                            System.out.println("Digite nuevo posicion");
+                            futbolistas[i].setPosicion(entrada.next());
+                            System.out.println("Digite nueva edad");
+                            futbolistas[i].setEdad(entrada.nextInt());
+                            System.out.println("Digite nuevo equipo");
+                            futbolistas[i].setEquipo(entrada.next());
+                            System.out.println("");
+                            
+                            
+                        }else{
+                            System.out.println("No encontrado");
+                        
+                        }
+                    }
                     break;
-                case 3:
-                    break;
+                    
+                    
                 case 4:
                     
                     for (int i=0; i<contador; i++) {
@@ -87,8 +136,10 @@ public class Convocatoria {
                         System.out.println(futbolistas[i].getPosicion());
                         System.out.println(futbolistas[i].getEdad());
                         System.out.println(futbolistas[i].getEquipo());
+                        System.out.println("");
                     }
                     break;
+                    
                 case 5:
                     System.out.println("");
                     System.exit(0);
